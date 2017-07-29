@@ -13,3 +13,8 @@ install:
 	source `which virtualenvwrapper.sh`; \
 	workon $(PROJECT_NAME); \
 	pip install -r requirements.txt;
+
+start:
+	source `which virtualenvwrapper.sh`; \
+	workon $(PROJECT_NAME); \
+	dev_appserver.py . --log_level debug;
