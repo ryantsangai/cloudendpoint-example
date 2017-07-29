@@ -3,10 +3,13 @@
 
 import endpoints
 
-from apis.demo import DemoApi
+from apis import demo_api
+from apis.bugs import BugApi
+from apis.count import CountApi
 
 import logging
 
 
-
-api = endpoints.api_server([DemoApi])
+api = endpoints.api_server([
+    demo_api,
+])
