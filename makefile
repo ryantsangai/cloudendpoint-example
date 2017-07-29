@@ -18,3 +18,6 @@ start:
 	source `which virtualenvwrapper.sh`; \
 	workon $(PROJECT_NAME); \
 	dev_appserver.py . --log_level debug;
+
+doc:
+	python lib/endpoints/endpointscfg.py get_openapi_spec main.DemoApi --hostname ${PROJECT_NAME}.appspot.com
